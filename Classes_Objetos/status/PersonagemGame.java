@@ -8,9 +8,8 @@ public class PersonagemGame{
     }
 
     public void setSaudeAtual(int saudeAtual) {
-
         this.saudeAtual = saudeAtual;
-        if(this.saudeAtual > 0){
+        if(saudeAtual > 0){
             this.status = "vivo";
         }else{
             this.status = "morto";
