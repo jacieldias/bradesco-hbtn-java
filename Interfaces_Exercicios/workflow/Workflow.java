@@ -1,10 +1,11 @@
+import java.util.ArrayList;
 import java.util.List;
 
 import atividades.Atividade;
 
 public class Workflow {
 
-    List<Atividade> atividades;
+    List<Atividade> atividades = new ArrayList<>();
 
     public void registrarAtividade(Atividade atividade) {
         atividades.add(atividade);
