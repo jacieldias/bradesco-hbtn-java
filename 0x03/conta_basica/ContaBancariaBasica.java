@@ -47,10 +47,10 @@ public class ContaBancariaBasica {
     }
 
     public double calcularJurosMensal(){
-        if (saldo <= 0) {
+        if (saldo < 0) {
             return 0.0;
         }
-        double taxaMensal = taxaJurosAnual / 12 / 100;
+        double taxaMensal = (taxaJurosAnual / 12) / 100;
         return saldo * taxaMensal;
     }
 
