@@ -46,12 +46,13 @@ public class ContaBancariaBasica {
         return Math.min(tarifaFixa, tarifaPercentual);
     }
 
-    public double calcularJurosMensal(){
+    public double calcularJurosMensal() {
         if (saldo < 0) {
             return 0.0;
         }
         double taxaMensal = (taxaJurosAnual / 12) / 100;
-        return saldo * taxaMensal;
+        double juros = saldo * taxaMensal;
+        return Math.round(juros * 100.0) / 100.0;
     }
 
     public void aplicarAtualizacaoMensal(){
