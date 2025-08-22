@@ -3,6 +3,10 @@ public class ContaBancariaTarifada extends ContaBancariaBasica{
 
     private int quantidadeTransacoes;
 
+    public ContaBancariaTarifada(String numeracao, double taxaJurosAnual){
+        super(numeracao, taxaJurosAnual);
+    }
+
     @Override
     public void sacar(double valor) throws OperacaoInvalidaException{
         super.sacar(valor);
