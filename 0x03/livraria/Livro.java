@@ -6,7 +6,7 @@ public class Livro {
     private String autor;
     private double preco;
 
-    public Livro(String titulo, String autor, double preco) {
+    public Livro(String titulo, String autor, double preco) throws AutorInvalidoException, LivroInvalidoException{
 
         if (titulo == null || titulo.trim().length() < 3) {
             throw new LivroInvalidoException("Titulo de livro invalido");
