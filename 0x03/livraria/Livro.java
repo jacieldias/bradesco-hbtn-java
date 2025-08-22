@@ -7,6 +7,18 @@ public class Livro {
     private double preco;
 
     public Livro(String titulo, String autor, double preco) {
+
+        if (titulo == null || titulo.trim().length() < 3) {
+            throw new LivroInvalidoException("Titulo de livro invalido");
+        }
+        if (autor == null || autor.trim().split(" ").length < 2) {
+            throw new AutorInvalidoException("Nome de autor invalido");
+        }
+        if (preco <= 0) {
+            throw new LivroInvalidoException("Preco de livro invalido");
+        }
+
+
         this.titulo = titulo;
         this.autor = autor;
         this.preco = preco;
