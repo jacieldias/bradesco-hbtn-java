@@ -6,9 +6,7 @@ public class Numero {
 		try {
 			resultado = a/b;
 		} catch (Exception e) {
-			System.out.println("Nao eh possivel dividir por zero");
-			System.out.println(String.format("%d / %d = %d", a, b, resultado));
-			
+			System.out.println("Nao eh possivel dividir por zero");			
 		}finally {
 			System.out.println(String.format("%d / %d = %d", a, b, resultado));
 		}
