@@ -1,3 +1,5 @@
+import exceptions.*;
+
 public class Livro {
 
     private String titulo;
@@ -14,7 +16,7 @@ public class Livro {
         return titulo;
     }
 
-    public void setTitulo(String titulo) {
+    public void setTitulo(String titulo) throws LivroInvalidoException {
         if (titulo == null || titulo.trim().length() < 3) {
             throw new LivroInvalidoException("Titulo de livro invalido");
         }
@@ -25,7 +27,7 @@ public class Livro {
         return autor;
     }
 
-    public void setAutor(String autor) {
+    public void setAutor(String autor) throws AutorInvalidoException{
         if (autor == null || autor.trim().split("\\s+").length < 2) {
             throw new AutorInvalidoException("Nome de autor invalido");
         }
@@ -36,7 +38,7 @@ public class Livro {
         return preco;
     }
 
-    public void setPreco(double preco) {
+    public void setPreco(double preco) throws LivroInvalidoException{
         if (preco <= 0) {
             throw new LivroInvalidoException("Preco de livro invalido");
         }
