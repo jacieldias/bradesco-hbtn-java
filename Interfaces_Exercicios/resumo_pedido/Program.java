@@ -2,7 +2,11 @@ package Interfaces_Exercicios.resumo_pedido;
 
 import java.util.Locale;
 
-import Interfaces_Exercicios.resumo_pedido.provedores.*;
+import Interfaces_Exercicios.resumo_pedido.provedores.JadLog;
+import Interfaces_Exercicios.resumo_pedido.provedores.Loggi;
+import Interfaces_Exercicios.resumo_pedido.provedores.Sedex;
+
+
 
     public class Program {
         public static void main(String[] args) {
