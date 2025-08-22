@@ -6,9 +6,7 @@ import Interfaces_Exercicios.resumo_pedido.provedores.JadLog;
 import Interfaces_Exercicios.resumo_pedido.provedores.Loggi;
 import Interfaces_Exercicios.resumo_pedido.provedores.Sedex;
 
-
-
-    public class Program {
+public class Program {
         public static void main(String[] args) {
             Locale.setDefault(new Locale("pt", "BR"));
             Pedido pedido1 = new Pedido(1, 1500, 234.90);
