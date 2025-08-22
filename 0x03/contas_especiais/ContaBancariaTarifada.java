@@ -1,3 +1,4 @@
+import exceptions.*;
 public class ContaBancariaTarifada extends ContaBancariaBasica{
 
     private int quantidadeTransacoes;

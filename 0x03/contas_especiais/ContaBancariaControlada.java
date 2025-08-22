@@ -1,4 +1,4 @@
-import ContaBancariaBasica;
+import exceptions.*;
 
 public class ContaBancariaControlada extends ContaBancariaBasica{
     private double saldoMinimo;
