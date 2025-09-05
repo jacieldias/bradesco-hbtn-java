@@ -1,5 +1,7 @@
 package estruturas_de_dados;
 
+import java.util.*;
+
 public class Contato {
 private List<String> telefones;
     private Set<String> emails;
