@@ -1,5 +1,3 @@
-package estruturas_de_dados.2;
-
 public class Contato {
 private List<String> telefones;
     private Set<String> emails;

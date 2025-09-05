@@ -1,4 +1,3 @@
-package estruturas_de_dados.2;
 
 public class GerenciamentoDeContatos {
 private Map<String, Contato> contatos;
