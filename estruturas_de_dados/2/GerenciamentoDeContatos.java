@@ -1,5 +1,7 @@
 package estruturas_de_dados;
 
+import java.util.*;
+
 public class GerenciamentoDeContatos {
 private Map<String, Contato> contatos;
 
