@@ -1,4 +1,4 @@
-package estruturas_de_dados;
+package estruturas_de_dados.2;
 
 import java.util.*;
 
