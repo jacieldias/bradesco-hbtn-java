@@ -14,14 +14,16 @@ private Map<String, Contato> contatos;
 
     // Adiciona um novo contato
     public void adicionarContato(String nome, String telefone, String email) {
+        if (contatos.containsKey(nome)) {
+            System.out.println("Erro: Contato com nome " + nome + " já existe!");
+            return;
+        }
+        
         Contato contato = new Contato();
         contato.adicionarTelefone(telefone);
-        if (contato.adicionarEmail(email)) {
-            contatos.put(nome, contato);
-            System.out.println("Contato "+ nome + " adicionado com sucesso!");
-        } else {
-            System.out.println("Erro: Contato com nome " + nome + " já existe!");
-        }
+        contato.adicionarEmail(email)
+        contatos.put(nome, contato);
+        System.out.println("Contato "+ nome + " adicionado com sucesso!");
     }
 
 
