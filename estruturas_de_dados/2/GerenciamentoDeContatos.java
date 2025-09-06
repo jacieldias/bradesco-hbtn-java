@@ -21,7 +21,7 @@ private Map<String, Contato> contatos;
         
         Contato contato = new Contato();
         contato.adicionarTelefone(telefone);
-        contato.adicionarEmail(email)
+        contato.adicionarEmail(email);
         contatos.put(nome, contato);
         System.out.println("Contato "+ nome + " adicionado com sucesso!");
     }
