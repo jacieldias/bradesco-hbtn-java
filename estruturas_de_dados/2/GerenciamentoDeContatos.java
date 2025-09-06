@@ -3,12 +3,12 @@
 import java.util.*;
 
 public class GerenciamentoDeContatos {
-private Map<String, Contato> contatos;
+private Set<String, Contato> contatos;
 
 
     // Construtor
     public GerenciamentoDeContatos() {
-        contatos = new HashMap<>();
+        contatos = new HashSet<>();
     }
 
 
@@ -27,7 +27,6 @@ private Map<String, Contato> contatos;
 
     // Exibe todos os contatos
     public void exibirContatos() {
-        System.out.println("Exibindo todos os contatos:");
         for (Map.Entry<String, Contato> entry : contatos.entrySet()) {
             System.out.println("Nome: " + entry.getKey());
             entry.getValue().exibirContato();
@@ -38,7 +37,6 @@ private Map<String, Contato> contatos;
 
     // Busca um contato pelo nome
     public void buscarContato(String nome) {
-        System.out.println("Buscando contato: '" + nome+"'");
         Contato contato = contatos.get(nome);
         if (contato != null) {
             System.out.println("Contato encontrado: " + nome);
@@ -52,10 +50,8 @@ private Map<String, Contato> contatos;
     // Remove um contato pelo nome
     public void removerContato(String nome) {
         if (contatos.remove(nome) != null) {
-            System.out.println("Removendo contato: '" + nome+"'");
             System.out.println("Contato '" + nome + "' removido com sucesso!");
         } else {
-            System.out.println("Tentando remover contato '" + nome+"' que não existe:");
             System.out.println("Contato '" + nome + "' não encontrado.");
         }
     }
