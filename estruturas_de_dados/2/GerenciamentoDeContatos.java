@@ -1,14 +1,14 @@
 
-
-import java.util.*;
+import java.util.Map;
+import java.util.HashMap;
 
 public class GerenciamentoDeContatos {
-private Set<String, Contato> contatos;
+private Map<String, Contato> contatos;
 
 
     // Construtor
     public GerenciamentoDeContatos() {
-        contatos = new HashSet<>();
+        contatos = new HashMap<>();
     }
 
 
