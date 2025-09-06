@@ -44,7 +44,7 @@ private Map<String, Contato> contatos;
             System.out.println("Contato encontrado: " + nome);
             contato.exibirContato();
         } else {
-            System.out.println("Contato com nome '" + nome + "' não encontrado.");
+            System.out.println("Contato com nome " + nome + " não encontrado.");
         }
     }
 
@@ -52,9 +52,9 @@ private Map<String, Contato> contatos;
     // Remove um contato pelo nome
     public void removerContato(String nome) {
         if (contatos.remove(nome) != null) {
-            System.out.println("Contato '" + nome + "' removido com sucesso!");
+            System.out.println("Contato " + nome + " removido com sucesso!");
         } else {
-            System.out.println("Contato '" + nome + "' não encontrado.");
+            System.out.println("Contato " + nome + " não encontrado.");
         }
     }
 
