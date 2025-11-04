@@ -3,7 +3,7 @@ public class PessoasArray {
     private String[] nomes;
 
     public PessoasArray() {
-        nomes = new String[]{"Amanda", "Beatriz", "Carlos","Daniela","Eduardo",
+        nomes =new String[]{"Amanda", "Beatriz", "Carlos","Daniela","Eduardo",
                 "Fabio","Gustavo", "Hingrid","Isabela","Joao","Leise","Maria",
                 "Norberto","Otavio","Paulo", "Quirino","Renata","Sabata",
                 "Tais","Umberto","Vanessa","Xavier"};
@@ -17,14 +17,7 @@ public class PessoasArray {
         this.nomes = nomes;
     }
 
-    // implementar o método de pesquisaConstante
-    public void pesquisaTempoConstante(int id){
-        if (id >= nomes.length){
-            throw new IllegalArgumentException(String.format("O array de nomes possui :%d nomes.", nomes.length));
-        }
-        System.out.println(String.format("Nome pesquisado é %s que está na posição %d", nomes[id], id)); 
-    }
-    
+    // implementar o método de buscaLinear
     public void buscaLinear(String nome){
         boolean encontrado = false;
         System.out.println("Procurando pelo nome: "+ nome);
@@ -40,5 +33,5 @@ public class PessoasArray {
         if(!encontrado){
             throw new IllegalArgumentException(String.format("O nome %s não se encontra no array de nomes", nome));
         }
-    }    
+    }
 }
