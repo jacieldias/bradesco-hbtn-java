@@ -1,5 +1,3 @@
-package Generics.midias;
-
 public class Livro extends Midia{
     private int edicao;
 
