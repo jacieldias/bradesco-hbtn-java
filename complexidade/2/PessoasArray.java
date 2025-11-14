@@ -23,11 +23,11 @@ public class PessoasArray {
         int esquerda = 0;
         int direita = nomes.length-1;
 
-        System.out.println("Procurando pelo nome: \""+ nome+"\"");
+        System.out.println("Procurando nome: \""+ nome+"\"");
         while(esquerda <= direita){
             int meio = (esquerda + direita)/2;
             int result = nomes[meio].compareToIgnoreCase(nome);
-            System.out.println("Passando pelo indice:"+meio);
+            System.out.println("Passando pelo indice: "+meio);
             if(result == 0){
                 System.out.println(String.format("Nome %s encontrado na posição %d", nome, meio));
                 encontrado = true;
