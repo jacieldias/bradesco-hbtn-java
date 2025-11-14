@@ -29,9 +29,7 @@ public class PessoasArray {
                 System.out.println(String.format("Nome pesquisado é %s que está na posição %d", nome, i));
             }
         }
+        if(!encontrado) throw new IllegalArgumentException(String.format("O nome %s não se encontra no array de nomes", nome));
         
-        if(!encontrado){
-            throw new IllegalArgumentException(String.format("O nome %s não se encontra no array de nomes", nome));
-        }
     }
 }
