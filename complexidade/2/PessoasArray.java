@@ -23,7 +23,7 @@ public class PessoasArray {
         int esquerda = 0;
         int direita = nomes.length-1;
 
-        System.out.println("Procurando nome: \""+ nome+"\"");
+        System.out.println("Procurando o nome: \""+ nome+"\"");
         while(esquerda <= direita){
             int meio = (esquerda + direita)/2;
             int result = nomes[meio].compareToIgnoreCase(nome);
