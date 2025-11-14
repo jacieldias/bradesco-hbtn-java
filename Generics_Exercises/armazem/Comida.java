@@ -1,3 +1,4 @@
+package Generics_Exercises.armazem;
 public class Comida {
     private String nome;
     private int calorias;
