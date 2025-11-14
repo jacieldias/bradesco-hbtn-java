@@ -1,4 +1,4 @@
-package Generics_Exercises.armazem;
+
 public class Eletronico {
     private String descricao;
     private double valor;
