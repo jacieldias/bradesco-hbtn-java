@@ -17,9 +17,18 @@ public class Program {
             System.out.println(ex.getMessage());
         }
 
-        ManipularArrayNumeros.removerNumero(numeros, 3);
-        ManipularArrayNumeros.removerNumero(numeros, 9);
-
+        try{
+            ManipularArrayNumeros.removerNumero(numeros, 3);
+        }catch(Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        
+        try{
+            ManipularArrayNumeros.removerNumero(numeros, 9);
+        }catch(Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        
         System.out.println(numeros);
 
         try {
