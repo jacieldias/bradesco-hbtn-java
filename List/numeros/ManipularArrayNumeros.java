@@ -23,7 +23,7 @@ public class ManipularArrayNumeros {
             throw new RuntimeException("Numero nao encontrado na lista");
         }
 
-        numeros.remove(numeroRemover);
+        numeros.remove(numeros.indexOf(numeroRemover));
     }
 
     public static void substituirNumero(List<Integer> numeros, int numeroSubstituir, int numeroSubstituto){
