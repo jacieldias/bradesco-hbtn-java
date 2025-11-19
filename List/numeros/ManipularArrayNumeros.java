@@ -19,11 +19,9 @@ public class ManipularArrayNumeros {
     }
 
     public static void removerNumero(List<Integer> numeros, int numeroRemover){
-        if(buscarPosicaoNumero(numeros, numeroRemover) < 0){
-            throw new RuntimeException("Numero nao encontrado na lista");
+        if(buscarPosicaoNumero(numeros, numeroRemover) >= 0){
+            numeros.remove(numeroRemover);
         }
-
-        numeros.remove(numeroRemover);
     }
 
     public static void substituirNumero(List<Integer> numeros, int numeroSubstituir, int numeroSubstituto){
