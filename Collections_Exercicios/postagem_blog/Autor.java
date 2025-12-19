@@ -22,6 +22,11 @@ public class Autor implements Comparable<Autor>{
 
     @Override
     public int compareTo(Autor outro) {
-        return this.toString().compareTo(outro.toString());    
+        int cmp = this.nome.compareTo(outro.nome);
+        if (cmp == 0) {
+            cmp = this.sobrenome.compareTo(outro.sobrenome);
+        }
+        return cmp;
     }
+    
 }
