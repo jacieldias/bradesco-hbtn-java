@@ -83,6 +83,7 @@ public class Blog {
             .sorted()
             .collect(Collectors.groupingBy(
                 Post::getAutor,
+                TreeMap::new,
                 Collectors.toCollection(TreeSet::new)
             ));
         
