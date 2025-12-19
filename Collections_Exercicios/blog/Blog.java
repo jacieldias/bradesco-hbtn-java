@@ -5,6 +5,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 
 public class Blog {
@@ -27,7 +28,7 @@ public class Blog {
     }
 
     public Map<String, Integer> obterContagemPorCategoria(){
-        HashMap<String, Integer> contagemCategorias = new HashMap<>();
+        Map<String, Integer> contagemCategorias = new TreeMap<>();
         List<String> categorias = posts.stream().map(Post::getCategoria).distinct().sorted().toList();
         categorias.stream().forEach(categoria -> {
             int totalPost = (int) posts.stream()
