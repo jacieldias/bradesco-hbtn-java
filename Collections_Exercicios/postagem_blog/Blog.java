@@ -68,10 +68,10 @@ public class Blog {
     public Map<Categorias, Set<Post>> obterTodosPostsPorCategorias(){
         Map<Categorias, Set<Post>> contagemCategorias = new LinkedHashMap();
         for(Categorias categoria : Categorias.values()){
-            Set<Post> posts = posts.stream()
+            Set<Post> postsCategoria = posts.stream()
             .filter(p -> p.getCategoria().equals(categoria))
             .collect(Collectors.toCollection(LinkedHashSet::new));
-            contagemCategorias.put(categoria, posts);
+            contagemCategorias.put(categoria, postsCategoria);
         }
         return contagemCategorias;
     }
@@ -82,6 +82,8 @@ public class Blog {
                 Post::getAutor,
                 Collectors.toCollection(LinkedHashSet::new)
             ));
+        
+        return postsPorAutor;  
     }
     
 
