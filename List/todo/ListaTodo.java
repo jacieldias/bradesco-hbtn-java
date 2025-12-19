@@ -45,9 +45,9 @@ public class ListaTodo {
     public void listarTarefas(){
         for(int i=0;i<tarefas.size();i++){
             if(tarefas.get(i).isEstahFeita()){
-                System.out.println(String.format("[X]  Id: %d - Descricao: %s", i, tarefas.get(i).getDescricao()));
+                System.out.println(String.format("[X]  Id: %d - Descricao: %s", tarefas.get(i).getIdentificador(), tarefas.get(i).getDescricao()));
             }else{
-                System.out.println(String.format("[ ]  Id: %d - Descricao: %s", i, tarefas.get(i).getDescricao()));
+                System.out.println(String.format("[ ]  Id: %d - Descricao: %s", tarefas.get(i).getIdentificador(), tarefas.get(i).getDescricao()));
             }
         }
     }
