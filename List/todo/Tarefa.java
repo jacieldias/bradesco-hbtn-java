@@ -4,7 +4,7 @@ public class Tarefa {
     private int identificador;
     
     public Tarefa(String descricao, int identificador) {
-        this.descricao = descricao;
+        modificarDescricao(descricao);
         this.identificador = identificador;
     }
 
