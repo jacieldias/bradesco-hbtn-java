@@ -1,4 +1,4 @@
-public class Autor {
+public class Autor implements Comparable<Autor>{
     private String nome;
     private String sobrenome;
     
@@ -18,5 +18,14 @@ public class Autor {
     @Override
     public String toString() {
         return nome + " " + sobrenome;
+    }
+
+    @Override
+    public int compareTo(Autor outro) {
+        int cmp = this.sobrenome.compareTo(outro.sobrenome);
+        if (cmp == 0) {
+            cmp = this.nome.compareTo(outro.nome);
+        }
+        return cmp;    
     }
 }

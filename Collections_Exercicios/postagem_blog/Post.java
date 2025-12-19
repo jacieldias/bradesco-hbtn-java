@@ -1,4 +1,4 @@
-public class Post {
+public class Post implements Comparable<Post>{
     private Autor autor; 
     private String titulo; 
     private String corpo; 
@@ -30,6 +30,11 @@ public class Post {
     @Override
     public String toString() {
         return titulo;
+    }
+
+    @Override
+    public int compareTo(Post outro) {
+        return this.titulo.compareTo(outro.titulo);
     }
 
 }
