@@ -19,7 +19,11 @@ public class Pedido {
     }
 
     public int removerSabor(String sabor){
-        int totalRemovido = (int) cookies.stream().filter(p -> p.getSabor().equalsIgnoreCase(sabor)).count();
+        int totalRemovido = cookies.stream()
+                            .filter(p -> p.getSabor().equalsIgnoreCase(sabor))
+                            .mapToInt(PedidoCookie::getQuantidadeCaixas)
+                            .sum();
+
         cookies.removeIf(p -> p.getSabor().equalsIgnoreCase(sabor));
         return totalRemovido;
     }
