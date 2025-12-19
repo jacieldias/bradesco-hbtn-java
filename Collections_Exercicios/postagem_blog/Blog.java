@@ -54,7 +54,7 @@ public class Blog {
 
     public Set<Post> obterPostsPorAutor(Autor autor){
         return posts.stream()
-        .filter(p -> p.getAutor().equals(autor))
+        .filter(p -> p.getAutor().getNome().equalsIgnoreCase(autor.getNome()) && p.getAutor().getSobrenome().equalsIgnoreCase(autor.getSobrenome()))
         .sorted()
         .collect(Collectors.toCollection(LinkedHashSet::new));
     }
