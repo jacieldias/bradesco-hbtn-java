@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 public class Blog {
@@ -35,7 +36,7 @@ public class Blog {
         return posts.stream()
         .map(Post::getAutor)
         .sorted()
-        .collect(Collectors.toCollection(LinkedHashSet::new));
+        .collect(Collectors.toCollection(TreeSet::new));
     }
 
     public Map<Categorias, Integer> obterContagemPorCategoria(){
