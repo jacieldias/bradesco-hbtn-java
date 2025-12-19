@@ -55,14 +55,14 @@ public class Blog {
     public Set<Post> obterPostsPorAutor(Autor autor){
         return posts.stream()
         .filter(p -> p.getAutor().equals(autor))
-        .sorted(Comparator.comparing(Post::getTitulo))
+        .sorted()
         .collect(Collectors.toCollection(LinkedHashSet::new));
     }
 
     public Set<Post> obterPostsPorCategoria(Categorias categoria){
         return posts.stream()
         .filter(p -> p.getCategoria().equals(categoria))
-        .sorted(Comparator.comparing(Post::getTitulo))
+        .sorted()
         .collect(Collectors.toCollection(LinkedHashSet::new));
     }
 
@@ -71,6 +71,7 @@ public class Blog {
         for(Categorias categoria : Categorias.values()){
             Set<Post> postsCategoria = posts.stream()
             .filter(p -> p.getCategoria().equals(categoria))
+            .sorted()
             .collect(Collectors.toCollection(LinkedHashSet::new));
             contagemCategorias.put(categoria, postsCategoria);
         }
@@ -79,6 +80,7 @@ public class Blog {
 
     public Map<Autor, Set<Post>> obterTodosPostsPorAutor(){
         Map<Autor, Set<Post>> postsPorAutor = posts.stream()
+            .sorted()
             .collect(Collectors.groupingBy(
                 Post::getAutor,
                 Collectors.toCollection(LinkedHashSet::new)
